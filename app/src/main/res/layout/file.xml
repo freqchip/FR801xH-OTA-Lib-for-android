@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    app:layoutDescription="@xml/file_scene">
+
+    <Button
+        android:id="@+id/localbt"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_style"
+        android:onClick="localBnOnclick"
+        android:text="路径"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etShow" />
+
+    <Button
+        android:id="@+id/searchbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_style"
+        android:onClick="searchBnOnclick"
+        android:text="搜索"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/updatebt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style"
+        android:onClick="updateBnOnclick"
+        android:text="写入"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pathet" />
+
+    <EditText
+        android:id="@+id/pathet"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="15"
+        android:background="@drawable/editbox"
+        android:editable="false"
+        android:focusable="false"
+        android:gravity="top"
+        android:hint="文件路径"
+        app:layout_constraintEnd_toStartOf="@+id/localbt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etShow" />
+
+    <EditText
+        android:id="@+id/etShow"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/editbox"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:gravity="top"
+        android:hint="接收区"
+        android:inputType="textMultiLine"
+        android:maxLines="20"
+        app:layout_constraintStart_toEndOf="@+id/searchbt"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/darker_gray"
+        android:longClickable="false"
+        android:text="Tips: \n\n1.首次安装,请打开位置和存储权限.\n\n2.点击搜索, 连接成功后,点击写入.\n\n3.长按已连接,断开连接,重新搜索."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatebt" />
+
+</android.support.constraint.ConstraintLayout>

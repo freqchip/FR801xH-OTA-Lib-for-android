@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#eee"
+     >
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="功能界面"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        >
+
+<RadioGroup
+    android:id="@+id/radiogr"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:paddingTop="22dp">
+
+    <RadioButton
+        android:id="@+id/filebt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+         />
+
+    <RadioButton
+        android:id="@+id/webbt"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RadioGroup>
+ <LinearLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+    
+     >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" 
+         >
+    
+	<EditText 
+	    android:id="@+id/pathet"
+	    android:layout_width="wrap_content"
+	   	android:layout_height="50dp"
+	   	android:layout_weight="15"
+	   	android:background="@drawable/editbox"
+	   	android:hint="文件路径"
+	    />
+      <Button 
+          android:id="@+id/localbt"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_weight="1"
+          android:background="@drawable/btn_style"
+          android:text="..."/>
+    </LinearLayout>
+    <EditText
+          android:id="@+id/wwwet"
+          android:layout_width="fill_parent"
+          android:layout_height="50dp"
+          android:background="@drawable/editbox"
+          android:hint="请输入网址" />
+</LinearLayout>
+ </LinearLayout>
+ <RadioGroup
+    android:id="@+id/selectrg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:layout_marginLeft="5dp"
+    android:paddingTop="5dp">
+
+    <RadioButton
+        android:id="@+id/psk_patchrb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+         />
+	 <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="不写入sbc数据"
+         />
+    <RadioButton
+        android:id="@+id/sbcrb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"        
+        android:text="全部写入"
+         />
+</RadioGroup>
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:fastScrollEnabled="true"
+            android:layout_marginTop="3dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:fillViewport="true"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/etShow"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/editbox"
+                android:hint="接收区"
+                android:inputType="textMultiLine"
+                android:maxLines="20" >
+
+            </EditText>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/etSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="发送区"
+            android:layout_marginTop="10dp"
+            android:inputType="textMultiLine" 
+            android:background="@drawable/editbox"
+            />
+    </LinearLayout>
+
+	<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_style"
+            android:text="返回" />
+    <Button
+        android:id="@+id/btSend"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="发送命令"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_style"
+        android:layout_weight="1" />
+    </LinearLayout>
+  <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <Button
+            android:id="@+id/updatebt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_style"
+            android:text="写入" />
+   <!--  <Button
+        android:id="@+id/readbt"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="读取"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_style"
+        android:layout_weight="1" /> -->
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
